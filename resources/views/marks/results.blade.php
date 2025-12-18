@@ -42,7 +42,7 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Load List</button>
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-counterclockwise"></i> Daftar Muat</button>
                                 </div>
                             </div>
                         </form>
