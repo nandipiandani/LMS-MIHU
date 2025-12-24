@@ -178,4 +178,7 @@ Route::middleware(['auth'])->group(function () {
     // Update password
     Route::get('password/edit', [UpdatePasswordController::class, 'edit'])->name('password.edit');
     Route::post('password/edit', [UpdatePasswordController::class, 'update'])->name('password.update');
+
+    Route::get('/events', [EventController::class, 'index'])->name('events.index');
+
 });

@@ -1,18 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-start">
-        @include('layouts.left-menu')
-        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-10 col-xl-10 col-xxl-10">
-            <div class="row pt-2">
-                <div class="col ps-4">
-                    <h1 class="display-6 mb-3"><i class="bi bi-journal-medical"></i> Edit Course</h1>
+<div class="row">
+    @include('layouts.left-menu')
+
+    <main class="col-lg-10 col-md-9 ms-sm-auto px-4 pt-3">
+                    <h1 class="display-6 mb-3"><i class="bi bi-journal-medical"></i> Edit Mata Kuliah</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Courses</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Edit Course</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{url()->previous()}}">Mata Kuliah</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Edit Mata Kuliah</li>
                         </ol>
                     </nav>
                     @include('session-messages')

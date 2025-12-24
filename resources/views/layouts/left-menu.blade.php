@@ -318,14 +318,16 @@
                 <!-- Promosi -->
                 @if (!session()->has('browse_session_id'))
                 <div class="accordion-item border-0 mb-2">
-                    <a class="nav-link sidebar-item {{ request()->is('promotions*')? 'active' : '' }}" href="{{url('promotions/index')}}">
-                        <div class="d-flex align-items-center">
-                            <div class="sidebar-icon">
-                                <i class="bi bi-graph-up-arrow fs-5"></i>
-                            </div>
-                            <span class="sidebar-text ms-3">Promosi</span>
-                        </div>
-                    </a>
+                    <a class="nav-link sidebar-item {{ request()->routeIs('promotions.index') ? 'active' : '' }}"
+   href="{{ route('promotions.index') }}">
+    <div class="d-flex align-items-center">
+        <div class="sidebar-icon">
+            <i class="bi bi-graph-up-arrow fs-5"></i>
+        </div>
+        <span class="sidebar-text ms-3">Promosi</span>
+    </div>
+</a>
+
                 </div>
                 @endif
 
@@ -558,4 +560,17 @@
             display: none;
         }
     }
+    .nav-link.sidebar-item {
+    pointer-events: auto;
+    cursor: pointer;
+}
+.nav-link.sidebar-item {
+    position: relative;
+    z-index: 10;
+}
+
+.nav-link.sidebar-item:hover {
+    transform: none !important;
+}
+
 </style>

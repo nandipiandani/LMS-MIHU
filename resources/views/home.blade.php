@@ -176,7 +176,7 @@
             <div class="row g-4">
                 <!-- Events Calendar -->
                 <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm h-100" style="border-radius: 20px;">
+                    <div class="card border-0 shadow-sm h-100 no-hover-card" style="border-radius: 20px;">
                         <div class="card-header bg-white border-0 py-3" style="border-radius: 20px 20px 0 0;">
                             <h5 class="fw-bold mb-0">
                                 <i class="bi bi-calendar-event text-primary me-2"></i>
@@ -188,8 +188,8 @@
                                 @include('components.events.event-calendar', ['editable' => 'false', 'selectable' => 'false'])
                             </div>
                             <div class="mt-3">
-                                <a href="#" class="btn btn-outline-primary btn-sm">
-                                    <i class="bi bi-plus-circle me-1"></i> Lihat semua acara
+                                <a href="{{ route('events.index') }}" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-calendar3 me-1"></i> Lihat semua acara
                                 </a>
                             </div>
                         </div>
@@ -276,6 +276,11 @@
 
 <style>
     /* Custom Modern Styling */
+    .no-hover-card:hover {
+    transform: none !important;
+    box-shadow: inherit !important;
+    }
+
     .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
