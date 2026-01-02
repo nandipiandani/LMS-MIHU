@@ -181,4 +181,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
 
+    Route::prefix('profil-magister-hukum')->group(function () {
+    Route::get('/pimpinan', [SdmProdiController::class, 'pimpinan'])->name('prodi.pimpinan');
+    Route::get('/dosen', [SdmProdiController::class, 'dosen'])->name('prodi.dosen');
+    Route::get('/tendik', [SdmProdiController::class, 'tendik'])->name('prodi.tendik');
+    Route::get('/kurikulum', [KurikulumController::class, 'index'])->name('prodi.kurikulum');
+    Route::get('/sap', [SapController::class, 'index'])->name('prodi.sap');
+    Route::get('/biaya', [BiayaController::class, 'index'])->name('prodi.biaya');
+    Route::get('/pengumuman', [PengumumanController::class, 'index'])->name('prodi.pengumuman');
+});
 });

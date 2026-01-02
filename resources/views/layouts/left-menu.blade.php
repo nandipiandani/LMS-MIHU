@@ -136,6 +136,73 @@
                 </div>
                 @endif
 
+                <!-- Profil Magister Ilmu Hukum -->
+<div class="accordion-item border-0 mb-2">
+    <h2 class="accordion-header">
+        <button class="accordion-button collapsed sidebar-item {{ request()->is('profil-magister-hukum*') ? 'active' : '' }}"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#profil-prodi-submenu"
+                aria-expanded="{{ request()->is('profil-magister-hukum*') ? 'true' : 'false' }}"
+                aria-controls="profil-prodi-submenu">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                    <div class="sidebar-icon">
+                        <i class="bi bi-mortarboard-fill fs-5"></i>
+                    </div>
+                    <span class="sidebar-text ms-3">Profil Magister Ilmu Hukum</span>
+                </div>
+                <i class="bi bi-chevron-down sidebar-chevron"></i>
+            </div>
+        </button>
+    </h2>
+
+    <div id="profil-prodi-submenu"
+         class="accordion-collapse collapse {{ request()->is('profil-magister-hukum*') ? 'show' : '' }}"
+         data-bs-parent="#sidebarAccordion">
+        <div class="accordion-body p-0">
+            <div class="submenu-content">
+
+                <a class="submenu-item {{ request()->routeIs('prodi.pimpinan') ? 'active' : '' }}"
+                   href="{{ route('prodi.pimpinan') }}">
+                    <i class="bi bi-person-badge me-2"></i> Pimpinan Program Studi
+                </a>
+
+                <a class="submenu-item {{ request()->routeIs('prodi.dosen') ? 'active' : '' }}"
+                   href="{{ route('prodi.dosen') }}">
+                    <i class="bi bi-people-fill me-2"></i> Dosen Magister Ilmu Hukum
+                </a>
+
+                <a class="submenu-item {{ request()->routeIs('prodi.tendik') ? 'active' : '' }}"
+                   href="{{ route('prodi.tendik') }}">
+                    <i class="bi bi-person-gear me-2"></i> Tenaga Kependidikan
+                </a>
+
+                <a class="submenu-item {{ request()->routeIs('prodi.kurikulum') ? 'active' : '' }}"
+                   href="{{ route('prodi.kurikulum') }}">
+                    <i class="bi bi-journal-text me-2"></i> Kurikulum Program Studi
+                </a>
+
+                <a class="submenu-item {{ request()->routeIs('prodi.sap') ? 'active' : '' }}"
+                   href="{{ route('prodi.sap') }}">
+                    <i class="bi bi-file-earmark-text me-2"></i> SAP
+                </a>
+
+                <a class="submenu-item {{ request()->routeIs('prodi.biaya') ? 'active' : '' }}"
+                   href="{{ route('prodi.biaya') }}">
+                    <i class="bi bi-cash-coin me-2"></i> Biaya Mahasiswa Baru
+                </a>
+
+                <a class="submenu-item {{ request()->routeIs('prodi.pengumuman') ? 'active' : '' }}"
+                   href="{{ route('prodi.pengumuman') }}">
+                    <i class="bi bi-megaphone me-2"></i> Pengumuman
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
                 <!-- Mata Kuliah Saya (Teacher) -->
                 @if(Auth::user()->role == "teacher")
                 <div class="accordion-item border-0 mb-2">
