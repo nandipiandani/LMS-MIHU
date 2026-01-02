@@ -70,8 +70,8 @@
                                 <div class="col-md-3">
                                     <label for="inputState" class="form-label">Jenis Kelamin<sup><i class="bi bi-asterisk text-primary"></i></sup></label>
                                     <select id="inputState" class="form-select" name="gender" required>
-                                        <option value="Male" {{old('gender') == 'male' ? 'selected' : ''}}>Laki-laki</option>
-                                        <option value="Female" {{old('gender') == 'female' ? 'selected' : ''}}>Perempuan</option>
+                                        <option value="Laki-laki" {{old('gender') == 'male' ? 'selected' : ''}}>Laki-laki</option>
+                                        <option value="Perempuan" {{old('gender') == 'female' ? 'selected' : ''}}>Perempuan</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
