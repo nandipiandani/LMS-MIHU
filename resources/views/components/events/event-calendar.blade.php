@@ -98,7 +98,7 @@
     <div class="modal-content">
 
       <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title">Edit Event</h5>
+        <h5 class="modal-title">Edit Acara</h5>
         <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
